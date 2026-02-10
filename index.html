@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Bottle Spinner</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 40px;
+            font-family: Arial;
+            background: #e3f2fd;
+        }
+        h1 { font-size: 2rem; }
+        #bottle {
+            font-size: 120px;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        button {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background: #1565c0; }
+    </style>
+</head>
+<body>
+    <h1>Spin the Bottle!</h1>
+    <div id="bottle">💧</div>
+    <br>
+    <button onclick="spin()">SPIN</button>
+    
+    <script>
+        function spin() {
+            const bottle = document.getElementById('bottle');
+            const rotation = Math.random() * 360 * 5;
+            bottle.style.transform = 'rotate(' + rotation + 'deg)';
+        }
+    </script>
+</body>
+</html>
